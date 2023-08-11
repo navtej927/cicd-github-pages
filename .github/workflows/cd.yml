@@ -39,6 +39,8 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     # When application is successfully tested and build has been generated
     # Then we can start with deployment
     needs: build
