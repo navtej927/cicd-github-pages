@@ -10,7 +10,7 @@ export const App = () => {
     <Provider store={store}>
       {CONFIG.APP_NAME}
       <HomePage />
-      <div>version : {PackageJson.version}</div>
+      <div>version - {PackageJson.version}</div>
     </Provider>
   );
 };
