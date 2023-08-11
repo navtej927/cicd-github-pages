@@ -59,6 +59,8 @@ jobs:
           user_email: 'github-actions[bot]@users.noreply.github.com'
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     # We specify that deploys needs to
     # finish before we create a release
     needs: deploy
