@@ -1,10 +1,9 @@
 name: CD Pipeline
 
-on:
-  workflow_dispatch:
-  # push:
-  #   tags:
-  #   - '*'
+on: 
+  push:
+    tags:
+    - '*'
 
 jobs:
   build:
@@ -51,7 +50,7 @@ jobs:
 
       - name: check the files to deploy
         run: cd dist && ls
-      
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -74,19 +73,19 @@ jobs:
       - name: Zip build
         uses: thedoctor0/zip-release@master
         with:
-          filename: CICD-GITHUB-PAGES.zip
+          filename: react-github-actions-release-build.zip
           path: react-github-actions-build
       # Upload as an artifact of the current workflow
       - name: Upload build zip artifact
         uses: actions/upload-artifact@v1
         with:
-          name: CICD-GITHUB-PAGES.zip
-          path: CICD-GITHUB-PAGES.zip
+          name: react-github-actions-release-build.zip
+          path: react-github-actions-release-build.zip
       # Make official GitHub release which will trigger
       # sending the mail with link for access
-      - name: Deploy to github pages
+      - name: Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: CICD-GITHUB-PAGES.zip
-          body: https://navtej927.github.io/cicd-github-pages//
+          artifacts: react-github-actions-release-build.zip
+          body: https://navtej927.github.io/cicd-github-pages/
           token: ${{ secrets.GITHUB_TOKEN }}
