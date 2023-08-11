@@ -1,9 +1,12 @@
 name: CD Pipeline
 
-on: 
-  push:
-    tags:
-    - '*'
+# on: 
+#   push:
+#     tags:
+#     - '*'
+
+on:
+  workflow_dispatch:
 
 jobs:
   build:
