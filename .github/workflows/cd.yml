@@ -84,9 +84,9 @@ jobs:
           path: CICD-GITHUB-PAGES.zip
       # Make official GitHub release which will trigger
       # sending the mail with link for access
-      - name: Release
+      - name: Deploy to github pages
         uses: ncipollo/release-action@v1
         with:
           artifacts: CICD-GITHUB-PAGES.zip
-          body: https://navtej927.github.io/CI-github-pages-react/
+          body: https://navtej927.github.io/cicd-github-pages//
           token: ${{ secrets.GITHUB_TOKEN }}

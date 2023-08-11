@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://navtej927.github.io/CI-github-pages-react/",
+  "homepage": "https://navtej927.github.io/cicd-github-pages/",
   "scripts": {
     "build": "webpack --env mode=production --mode production",
     "build:dev": "webpack --env mode=development --mode development",
