@@ -1,18 +1,13 @@
 name: CD Pipeline
 
-# on: 
-#   push:
-#     tags:
-#     - '*'
-
-on:
-  workflow_dispatch:
+on: 
+  push:
+    tags:
+    - '*'
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - name: Clone repository
       uses: actions/checkout@v2
