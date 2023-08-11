@@ -1,10 +1,9 @@
-name: Generate Tag and push to github
+name: Generate Tag Pipeline
 
 on:
   workflow_dispatch:
     branches:
       - master
-
 jobs:
   generate_tag:
     runs-on: ubuntu-latest
