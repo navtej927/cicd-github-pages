@@ -1,9 +1,8 @@
-name: Generate Tag Pipeline
+name: Manual Generate Tag Pipeline
 
 on:
   workflow_dispatch:
-    branches:
-      - master
+  
 jobs:
   generate_tag:
     runs-on: ubuntu-latest
